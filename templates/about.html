@@ -1,0 +1,96 @@
+{% extends 'index.html' %}
+
+{% block body %}
+<br>
+
+<h3>Automated Document Processing Using Deep Learning</h3>
+
+<h4>Draft Thesis Proposal</h4>
+
+<br><br>
+
+<p><strong>Submitted by:</strong><br>
+Mohammad Idrees<br>
+MSc. Data Science, Dubai Campus<br>
+University of Europe for Applied Sciences</p>
+
+<p><strong>Primary Supervisor</strong><br>
+Prof. Raja Hashim Ali</p>
+
+<p><strong>Second Supervisor</strong><br>
+Mr. Shan Faiz</p>
+
+<h4>Introduction</h4>
+<p>
+The Automated Document Processing Using Deep Learning aims to develop a system that will enable front desk operators to upload scanned business cards, automatically extract relevant entities, and visualise the extracted information. This project incorporates the following techniques to achieve objectives.
+</p>
+<ul>
+<li>Optical character recognition.</li>
+<li>Named entity recognition.</li>
+<li>Image processing.</li>
+</ul>
+
+<h4>Problem Statement</h4>
+<p>
+Manually extracting relevant information from business cards can be a time-consuming, error-prone process in the corporate world. By developing a web-based application for extracting and accurately identifying the following entities from scanned business cards:
+</p>
+<ul>
+<li>Organisation name.</li>
+<li>phone number.</li>
+<li>email addresses.</li>
+<li>Website address.</li>
+</ul>
+<p>
+Developing a user-friendly web interface for the application will help operators save time and provide an efficient solution for digitizing and managing contact information.
+</p>
+
+<h4>Methodology</h4>
+<p>The following structural approach will be used for my thesis :</p>
+<ul>
+<li><strong>Data Collection:</strong>
+    <ul>
+        <li>Collect diverse Business cards and scan them through mobile or dedicated scanners.</li>
+        <li>Use Pytesseract to extract raw text.</li>
+        <li>Manually label key entities using BIO tagging for supervised learning.</li>
+    </ul>
+</li>
+<li><strong>Preparing Data to train the model</strong>
+    <ul>
+        <li>Garbage character removal in whole dataset.</li>
+        <li>Convert labelled data to SpaCy NER training format</li>
+        <li>Split data into training and testing sets for model testing.</li>
+    </ul>
+</li>
+<li><strong>Model Training :</strong>
+    <ul>
+        <li>Training Named Entity Recognition model in SpaCy.</li>
+        <li>Evaluate performance.</li>
+    </ul>
+</li>
+<li><strong>Image Processing :</strong>
+    <ul>
+        <li>edge detection through OpenCV</li>
+    </ul>
+</li>
+<li><strong>On-premises web application</strong>
+    <ul>
+        <li>Usage of Flask for developing a web application.</li>
+        <li>JavaScript integration to create bounding boxes.</li>
+    </ul>
+</li>
+</ul>
+
+<h4>Expected outcomes</h4>
+<ul>
+<li>Train a deep learning model to identify entities of a business card.</li>
+<li>Significant reduction in time and human effort during business card processing.</li>
+<li>This Foundational project can be extended to invoice-type documents and can also be laterally modified in a facial recognition project.</li>
+</ul>
+
+<h4>Expected Findings</h4>
+<ul>
+<li>Integration of OCR, deep learning NER, and image processing will give a positive direction for improvement for traditional-based OCR methods.</li>
+<li>Overall results will help me to propose an automated reading and scanning system for business cards, which can be used in departments like human resources.</li>
+</ul>
+
+{% endblock %}
